@@ -1,0 +1,294 @@
+﻿@model WeTransfer.ViewModel.VMFileUpload
+
+@{ ViewData["Title"] = "WeTransfer"; }
+
+@if (Model.OkDiv != 0)
+{
+<script type="text/javascript">
+    window.onload = function () {
+        swal({
+            title: 'Felicidades!',
+            html: 'Se ha procesado correctamente el archivo',
+            type: 'success',
+            confirmButtonText: 'OK',
+            confirmButtonColor: "#F28123",
+        });
+    };
+</script>}
+
+@if (Model.ErrorDiv != 0)
+{
+<script type="text/javascript">
+    window.onload = function () {
+        swal({
+            title: 'Oops...',
+            html: '@Model.ListaErrores[Model.ErrorDiv]',
+            type: 'error',
+            confirmButtonText: 'OK',
+            confirmButtonColor: "#F28123",
+        });
+    };
+</script>}
+<div class="top-header-area" id="sticker">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-sm-12 text-center">
+                <div class="main-menu-wrap">
+                    <!-- logo -->
+                    <div class="site-logo">
+                        <a asp-controller="Home" asp-action="Index">
+                            <img src="~/assets/img/tasa.png" alt="">
+                        </a>
+                    </div>
+                    <!-- logo -->
+                    <!-- menu start -->
+                    <nav class="main-menu">
+                    </nav>
+                    <div class="mobile-menu"></div>
+                    <!-- menu end -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div> <!-- home page slider -->
+<div class="homepage-slider">
+    <div class="single-homepage-slider homepage-bg-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-lg-7 offset-lg-1 offset-xl-0">
+                    <div class="hero-text">
+                        <div style="margin-top:115px">
+                            <br />
+                            <h1>¡Te damos la bienvenida!</h1>
+                            <p class="subtitle">Selecciona un archivo por favor</p>
+                            <br />
+                            <div>
+                                <form enctype="multipart/form-data" asp-controller="Home" asp-action="Results">
+                                    <div class="form-row">
+                                        <div class="form-group col-md-8">
+                                            <input asp-for="File" class="form-control" style="padding: 30px;font-size:15px" />
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <button type="submit" class="boxed-btn" style="padding: 20px;"><b>Enviar</b></button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="single-homepage-slider homepage-bg-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-lg-7 offset-lg-1 offset-xl-0">
+                    <div class="hero-text">
+                        <div style="margin-top:115px">
+                            <br />
+                            <h1>¡Te damos la bienvenida!</h1>
+                            <p class="subtitle">Selecciona un archivo por favor</p>
+                            <br />
+                            <div>
+                                <form enctype="multipart/form-data" asp-controller="Home" asp-action="Results">
+                                    <div class="form-row">
+                                        <div class="form-group col-md-8">
+                                            <input asp-for="File" class="form-control" style="padding: 30px;font-size:15px" />
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <button type="submit" class="boxed-btn" style="padding: 20px;"><b>Enviar</b></button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@if (Model.OkDiv != 0)
+{
+<div class="product-section mt-150 mb-150">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2 text-center">
+                <div class="section-title">
+                    <h3>Challenge <span class="orange-text">Pedro Tonello</span></h3>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 col-md-12 text-center">
+                <div class="checkout-accordion-wrap">
+                    <div class="accordion" id="accordionExample">
+                        <div class="card single-accordion">
+                            <div class="card-header" id="headingOne">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                        <h5>Punto 1: <span class="orange-text"> Cantidad total de registros</span></h5>
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                <div class="container">
+                                    <br />
+                                    <h5>La cantidad total es: <span class="orange-text"> @ViewBag.Total</span></h5>
+                                    <br />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card single-accordion">
+                            <div class="card-header" id="headingTwo">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        <h5>Punto 2: <span class="orange-text"> Promedio de edad de socios de Racing</span></h5>
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                                <div class="container">
+                                    <br />
+                                    <h5>El promedio es: <span class="orange-text"> @ViewBag.Promedio</span></h5>
+                                    <br />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card single-accordion">
+                            <div class="card-header" id="headingThree">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        <h5>Punto 3: <span class="orange-text"> 100 primeras personas casadas, universitarias, ordenadas por edad asc</span></h5>
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                <div class="container">
+                                    <br />
+                                    <table id="table" class="table table-striped table-bordered" style="width:100%">
+                                        <thead>
+                                            <tr>
+                                                <th>Nombre</th>
+                                                <th>Edad</th>
+                                                <th>Equipo</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach (var item in ViewBag.Punto3)
+                                            {
+                                    <tr>
+                                        <td>
+                                            @item.Nombre
+                                        </td>
+                                        <th>
+                                            @item.Edad
+                                        </th>
+                                        <th>
+                                            @item.Equipo
+                                        </th>
+                                    </tr>
+}
+                                        </tbody>
+                                    </table>
+                                    <br />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card single-accordion">
+                            <div class="card-header" id="headingFour">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                        <h5>Punto 4: <span class="orange-text"> 5 nombres mas comunes de los fans de River</span></h5>
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                                <div class="container">
+                                    <br />
+                                    <table id="table" class="table table-striped table-bordered" style="width:100%">
+                                        <br />
+                                        <thead>
+                                            <tr>
+                                                <th>Nombre</th>
+                                                <th>Cantidad</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach (var item in ViewBag.Punto4)
+                                            {
+                                    <tr>
+                                        <td>
+                                            @item.Nombre
+                                        </td>
+                                        <th>
+                                            @item.Edad
+                                        </th>
+                                    </tr>}
+                                        </tbody>
+                                    </table>
+                                    <br />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card single-accordion">
+                            <div class="card-header" id="headingFive">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                        <h5>Punto 5: <span class="orange-text"> Listado de equipos, promedio de edad, menor edad, mayor edad, ordenados de mayor a menor por cantidad de socios</span></h5>
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+                                <div class="container">
+                                    <br />
+                                    <table id="table" class="table table-striped table-bordered" style="width:100%">
+                                        <thead>
+                                            <tr>
+                                                <th>Equipo</th>
+                                                <th>Cantidad</th>
+                                                <th>Promedio</th>
+                                                <th>Menor edad</th>
+                                                <th>Mayor edad</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach (var item in ViewBag.Punto5)
+                                            {
+                                            <tr>
+                                                <td>
+                                                    @item.Equipo
+                                                </td>
+                                                <th>
+                                                    @item.Cantidad
+                                                </th>
+                                                <th>
+                                                    @{double promedio = item.Promedio / item.Cantidad; }
+                                                    @promedio
+                                                </th>
+                                                <th>
+                                                    @item.EdadMenor
+                                                </th>
+                                                <th>
+                                                    @item.EdadMayor
+                                                </th>
+                                            </tr>}
+                                        </tbody>
+                                    </table>
+                                    <br />
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+}
+
