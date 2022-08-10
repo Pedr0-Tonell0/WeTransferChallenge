@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+N4JhX4lbdo9UoaMjOfE+30PYdnWU+Wn/BbNP0DIAoW65U2Lu42FUd77ArxzHzAiPgk7mvPbIZ/ZxkR7nQam0w==",
+  "dgSpecHash": "rHCf9cyxMMKbtcQ8MSftioBkIKgEUbaPsK7M4FtT2lKA6cZs7XEmcX/8JiQ79fhXxSLQhcWOF3cP5bbE7g9F8w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ptonello\\Desktop\\WeTransfer\\WeTransfer\\WeTransfer.csproj",
+  "projectFilePath": "C:\\Users\\ptonello\\Documents\\GitHub\\WeTransferChallenge\\WeTransfer\\WeTransfer\\WeTransfer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ptonello\\.nuget\\packages\\microsoft.entityframeworkcore\\5.0.0\\microsoft.entityframeworkcore.5.0.0.nupkg.sha512",
     "C:\\Users\\ptonello\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\5.0.0\\microsoft.entityframeworkcore.abstractions.5.0.0.nupkg.sha512",

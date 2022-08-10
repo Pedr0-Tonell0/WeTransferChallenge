@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ptonello\\Desktop\\WeTransfer\\WeTransfer\\WeTransfer.csproj": {}
+    "C:\\Users\\ptonello\\Documents\\GitHub\\WeTransferChallenge\\WeTransfer\\WeTransfer\\WeTransfer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ptonello\\Desktop\\WeTransfer\\WeTransfer\\WeTransfer.csproj": {
+    "C:\\Users\\ptonello\\Documents\\GitHub\\WeTransferChallenge\\WeTransfer\\WeTransfer\\WeTransfer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ptonello\\Desktop\\WeTransfer\\WeTransfer\\WeTransfer.csproj",
+        "projectUniqueName": "C:\\Users\\ptonello\\Documents\\GitHub\\WeTransferChallenge\\WeTransfer\\WeTransfer\\WeTransfer.csproj",
         "projectName": "WeTransfer",
-        "projectPath": "C:\\Users\\ptonello\\Desktop\\WeTransfer\\WeTransfer\\WeTransfer.csproj",
+        "projectPath": "C:\\Users\\ptonello\\Documents\\GitHub\\WeTransferChallenge\\WeTransfer\\WeTransfer\\WeTransfer.csproj",
         "packagesPath": "C:\\Users\\ptonello\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ptonello\\Desktop\\WeTransfer\\WeTransfer\\obj\\",
+        "outputPath": "C:\\Users\\ptonello\\Documents\\GitHub\\WeTransferChallenge\\WeTransfer\\WeTransfer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ptonello\\AppData\\Roaming\\NuGet\\NuGet.Config",
